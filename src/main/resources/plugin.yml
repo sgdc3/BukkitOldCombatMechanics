@@ -1,4 +1,4 @@
-main: gvlfm78.plugin.oldcombatmechanics.OCMMain
+main: gvlfm78.plugin.oldcombatmechanics.OldCombatMechanics
 name: OldCombatMechanics
 version: ${project.version}
 authors: [gvlfm78, Rayzr522]
