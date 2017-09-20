@@ -83,6 +83,7 @@ public class OldCombatMechanics extends JavaPlugin {
         // Initialize the module manager
         moduleManager = new ModuleManager(this);
         registerBuiltInModules();
+        moduleManager.initModules();
 
         // Register command handler
         getCommand("OldCombatMechanics").setExecutor(new CommandHandler(this));

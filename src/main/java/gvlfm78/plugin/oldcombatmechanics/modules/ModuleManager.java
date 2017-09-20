@@ -48,7 +48,7 @@ public class ModuleManager {
 
     public void disableModules() {
         for (Module module : modules.values()) {
-            if (module.isEnabled()) { // Disable onlu if was enabled
+            if (module.isEnabled()) { // Disable only if was enabled
                 disable(module);
             }
         }

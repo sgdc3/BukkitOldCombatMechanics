@@ -34,12 +34,14 @@ public class ModuleOldArmourStrength extends Module {
 
         ConfigurationSection section = getConfiguration();
 
-        customToughness = section.getDouble("customToughness");
+        customToughness = section.getDouble("toughness");
+
         armourValues = new HashMap<>();
-        for (String type : section.getKeys(false)) {
-            double value = section.getDouble(type);
+        ConfigurationSection strengthSection = section.getConfigurationSection("strength");
+        for (String type : strengthSection.getKeys(false)) {
+            double value = strengthSection.getDouble(type);
             Messenger.debug("[ArmourValues] Loading value '" + value + "' for type '" + type + "'");
-            armourValues.put(type, section.getDouble(type));
+            armourValues.put(type, value);
         }
     }
 
